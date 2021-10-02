@@ -1,13 +1,13 @@
 
-import { GetStaticProps } from 'next';
-import Head from 'next/head';
+import { GetStaticProps } from 'next'
+import Head from 'next/head'
 import Image from 'next/image'
 
-import { SubscribeButton } from '../components/SubscribeButton';
+import { SubscribeButton } from '../components/SubscribeButton'
 
-import { stripe } from '../services/stripe';
+import { stripe } from '../services/stripe'
 
-import styles from '../styles/home.module.scss';
+import styles from '../styles/home.module.scss'
 
 interface HomeProps {
   product: {
