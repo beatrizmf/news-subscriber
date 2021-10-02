@@ -12,15 +12,14 @@ export function SubscribeButton({ priceId }: SubscribeButtonProps) {
   const [session] = useSession();
   const router = useRouter()
 
+  function handleSeePosts() {
+    router.push('/posts')
+  }
+
   async function handleSubscribe() {
     if (!session) {
       signIn('github')
       return;
-    }
-
-    if (session.activeSubscription) {
-      router.push('/posts')
-      return
     }
 
     try {
@@ -36,7 +35,7 @@ export function SubscribeButton({ priceId }: SubscribeButtonProps) {
     }
   }
 
-  return (
+  return !session?.activeSubscription ? (
     <button
       type="button"
       className={styles.subscribeButton}
@@ -44,5 +43,13 @@ export function SubscribeButton({ priceId }: SubscribeButtonProps) {
     >
       Subscribe now
     </button>
-  );
+  ) : (
+    <button
+      type="button"
+      className={styles.subscribeButton}
+      onClick={handleSeePosts}
+    >
+      See posts
+    </button>
+  )
 }
