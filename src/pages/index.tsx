@@ -11,8 +11,8 @@ import styles from '../styles/home.module.scss'
 
 interface HomeProps {
   product: {
-    priceId: string;
-    amount: number;
+    priceId: string
+    amount: number
   }
 }
 
@@ -49,7 +49,7 @@ export const getStaticProps: GetStaticProps = async () => {
       style: 'currency',
       currency: 'USD',
     }).format(Number(price.unit_amount) / 100),
-  };
+  }
 
   return {
     props: {

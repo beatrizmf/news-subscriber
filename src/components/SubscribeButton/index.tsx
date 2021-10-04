@@ -9,7 +9,7 @@ interface SubscribeButtonProps {
 }
 
 export function SubscribeButton({ priceId }: SubscribeButtonProps) {
-  const [session] = useSession();
+  const [session] = useSession()
   const router = useRouter()
 
   function handleSeePosts() {
@@ -19,19 +19,19 @@ export function SubscribeButton({ priceId }: SubscribeButtonProps) {
   async function handleSubscribe() {
     if (!session) {
       signIn('github')
-      return;
+      return
     }
 
     try {
       const response = await api.post('/subscribe')
 
-      const { sessionId } = response.data;
+      const { sessionId } = response.data
 
       const stripe = await getStripeJs()
 
       await stripe?.redirectToCheckout({ sessionId })
     } catch (err) {
-      alert(err.message)
+      console.log(err)
     }
   }
 

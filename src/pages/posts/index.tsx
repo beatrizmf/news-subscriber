@@ -13,7 +13,7 @@ interface PostsProps {
 }
 
 export default function Posts({ posts }: PostsProps) {
-  const [session] = useSession();
+  const [session] = useSession()
 
   return (
     <>
