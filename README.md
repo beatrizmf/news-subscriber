@@ -2,9 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 # react.news
 Blog with subscription
 
-<video height="240" controls>
-  <source src="./.github/preview.mov" type="video/mp4">
-</video>
+![](./.github/preview.mov)
 
 ## Getting Started
 
