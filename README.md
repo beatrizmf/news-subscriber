@@ -2,10 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 # react.news
 Blog with subscription
 
-<video height="400" controls>
-  <source src="./.github/preview.mov">
-  Your browser does not support the video tag.
-</video>
+
+https://user-images.githubusercontent.com/37430014/135781235-8fc29418-dc85-47fc-899a-2330dcfeb9c7.mov
+
 
 ## Getting Started
 
